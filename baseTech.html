@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block título %}
+        TecFuture
+        {% endblock %}
+    </title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, #ffe4f2, #fff0f7);
+            color: #5c4b51;
+
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header{
+            background-color: #ffb6d9;
+            color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 10px rgba(255, 182, 217, 0.4);
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .menu a{
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .menu a:hover{
+            color: #fff0f7;
+        }
+
+        main{
+            flex: 1;
+            padding: 40px;
+        }
+
+        .card{
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0px 4px 15px rgba(255, 182, 217, 0.25);
+            border: 2px solid #ffd6ea;
+        }
+
+        .card h1{
+            margin-bottom: 15px;
+            color: #ff69b4;
+        }
+
+        .card p{
+            line-height: 1.6;
+            color: #6d5b63;
+        }
+
+        footer{
+            background-color: #ffb6d9;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+
+        <div class="logo">
+            TecFuture
+        </div>
+
+        <div class="menu">
+            <a href="/">Início</a>
+            <a href="/ContatoTech">Contato</a>
+            <a href="/CursosTech">Cursos</a>
+            <a href="/ProfessoresTech">Professores</a>
+        </div>
+
+    </div>
+</header>
+
+<main>
+    {% block conteudo %}
+    {% endblock %}
+</main>
+
+<footer>
+    <p>
+        2026 - Todos os direitos reservados
+    </p>
+
+    <p>
+        Desenvolvido com Flask + Templates
+    </p>
+</footer>
+
+</body>
+</html>
